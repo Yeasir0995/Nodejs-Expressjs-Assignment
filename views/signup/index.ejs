@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>sign up page</title>
+</head>
+
+<body>
+	<h2>signin Page</h2>
+	<a href="/">Home</a>
+	<form method="post">
+		<table border="1">
+			<tr>
+				<td>ID: </td>
+				<td><input type="text" name="id" value="<%= user.id%>" required></td>
+				<% if(error.fname!= null){ %>
+				<td><%= error.fname.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>First Name: </td>
+				<td><input type="text" name="fname" value="<%= user.fname %>" required></td>
+				<% if(error.fname!= null){ %>
+				<td><%= error.fname.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>Last Name: </td>
+				<td> <input type="text" name="lname" value="<%= user.lname %>" required></td>
+				<% if(error.lname!= null){ %>
+				<td><%= error.lname.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>Username: </td>
+				<td> <input type="text" name="uname" value="<%= user.uname %>" required></td>
+				<% if(error.uname!= null){ %>
+				<td><%= error.uname.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>usertype:</td>
+				<td><select name="usertype">
+						<option value="">select</option>
+						<option value="Receptionist">Receptionist</option>
+						<option value="patient">Patient</option>
+					</select></option>
+					</select>
+				</td>
+				<% if(error.usertype!= null){ %>
+				<td><%= error.usertype.msg %></td>
+				<% } %>
+			</tr><br>
+			<tr>
+				<td>Password: </td>
+				<td> <input type="text" name="password" value="<%= user.password %>" required></td>
+				<% if(error.fathersName!= null){ %>
+				<td><%= error.fathersName.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>Mail: </td>
+				<td> <input type="text" name="email" value="<%= user.email %>" required></td>
+				<% if(error.email!= null){ %>
+				<td><%= error.email.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>Phone No: </td>
+				<td> <input type="text" name="phonenumber" value="<%= user.phonenumber %>" required></td>
+				<% if(error.phone!= null){ %>
+				<td><%= error.phone.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>Blood Group: </td>
+				<td> <input type="text" name="bloodgroup" value="<%= user.bloodgroup%>" required></td>
+				<% if(error.nid!= null){ %>
+				<td><%= error.nid.msg %></td>
+				<% } %>
+			</tr>
+			<tr>
+				<td>Type: </td>
+				<td> <input type="text" name="type" value="<%= user.type %>" required></td>
+				<% if(error.password!= null){ %>
+				<td><%= error.password.msg %></td>
+				<% } %>
+
+			</tr>
+			<tr>
+				<td>Confirm Password:</td>
+				<td> <input type="password" name="cpassword" value="<%= user.cpassword %>" required></td>
+				<% if(error.cpassword!= null){ %>
+				<td><%= error.cpassword.msg %></td>
+				<% } %>
+			</tr>
+		</table>
+		<input type="submit" name="" value="Submit">
+	</form>
+	<a href="/login">Already have account? clcik to Login</a>
+</body>
+
+</html>
