@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"></script>
+	<title>Assign Doctor</title>
+</head>
+
+<body>
+	<nav class="navbar navbar--default">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+	          <h2>Assign Doctor</h2>
+
+			  <li class="active"> <a class="navbar-brand" href="/admin">home</a></li>
+			
+					<li class="active"> <a class="navbar-brand"href="/admin/view_Doctor">See Doctors</a></li>
+					<li class="active"> <a class="navbar-brand" href="/logout">Logout</a></li>
+					</ul>
+					</div>
+					</nav>
+	
+	<form class="form-horizontal" method="post">
+		<table class="table table-bordered">
+			<tr  class="info">
+				<td>Username:</td>
+			
+				<td>
+					<div class="row">
+						<div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+					     <div class="dropdown">
+							<div class="div-to-align">
+					<select class="form-control" name="username">
+						<% for(var i=0; i < userlist.length; i++){ %>
+						<option value="<%= userlist[i].username %>"><%= userlist[i].username %></option>
+						<% }%>
+					</select>
+					</div>
+					</div>
+					</div>
+					</div>
+				</td>
+			</tr>
+			<tr  class="info">
+				<td> Department :</td>
+				<td>
+					<script>
+						function random_function() {
+							var a = document.getElementById("post").value;
+							if (a === "Surgery") {
+								var arr = ["Consultant","Junior consultant"];
+							} else if (a === "Medicine") {
+								var arr = ["Consultant","Junior consultant"];
+							} else if (a === "Opthalmology") {
+								var arr = ["Consultant","Junior consultant"];
+							}
+							var string = "";
+
+							for (i = 0; i < arr.length; i++) {
+								string = string + "<option value=" + arr[i] + ">" + arr[i] + "</option>";
+							}
+							document.getElementById("output").innerHTML = string;
+						}
+					</script>
+					 <div class="row">
+						<div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+					     <div class="dropdown">
+							<div class="div-to-align">
+					<select class="form-control" id="post" name="dept" onchange="random_function()">
+						<option value="">select option</option>
+						<option value="Surgery">Surgery</option>
+						<option value="Medicine">Medicine</option>
+						<option value="Opthalmology">Opthalmology</option>
+					</select>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+				<div class="dropdown">
+					<div class="div-to-align">
+						<select class="form-control" id="output" name="post" value="output" onchange="random_function1()">
+						</select>
+					</div>
+					</div>
+					</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="text-center">
+		<input type="Submit" class="btn btn-primary" name="" value="Submit">
+		</div>
+	</form>
+</body>
+
+</html>

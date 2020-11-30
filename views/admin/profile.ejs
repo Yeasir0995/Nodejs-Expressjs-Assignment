@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"></script>
+	<title>Edit Profile</title>
+</head>
+
+<body>
+	<h2>Edit Profile</h2>
+	<nav class="navbar navbar--default">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li class="active"> <a class="navbar-brand"href="/admin">Home</a></li>
+				<li class="active"> <a class="navbar-brand"  href="/admin/view_BookList">BookList</a>
+			
+				<li class="active"> <a class="navbar-brand"href="/admin/view_Member">Member</a></li>
+				<li class="active"> <a class="navbar-brand"href="/admin/view_OrderList">Order</a></li>
+				<li class="active"> <a class="navbar-brand"href="/admin/view_AvailableBook">Available Book</a></li>
+				<li class="active"> <a class="navbar-brand"href="/logout">Logout</a></li>
+				</li>
+				</ul>
+</div>
+</nav>
+	<form class="form-inline" method="post">
+		<table  class="table table-bordered">
+			<tr class="info">
+			<td>
+			Name:
+			
+		<input type="text" class="form-control" name="name" value="<%= user.name %>" required>
+	</td>
+			</tr>
+			<tr class="info">
+			<td>
+			User Name:
+			<input type="text" class="form-control" name="uname" value="<%= user.username %>" required>
+		</td>
+			</tr>
+			<tr class="info">
+			<td>
+			Mail: 
+			<input type="text" class="form-control" name="email" value="<%= user.email %>" required>
+		</td>
+			</tr>
+			<tr class="info">
+			<td>
+			Phone No:
+			<input type="text" class="form-control" name="phone" value="<%= user.phone %>" required>
+		</td>
+			</tr>
+			<tr class="info">
+			<td> 
+			Password:
+			 <input type="password" class="form-control" name="password" value="<%= user.password %>" required>
+		</td>
+			</tr>
+			<tr class="info">
+			<td>
+			Confirm Password:
+		   <input type="password"class="form-control" name="cpassword" value="<%= user.password %>" required>
+		</td>
+			</tr>
+		</table>
+		<input type="submit"  class="btn btn-primary" name="" value="update">
+	</form>
+</body>
+
+</html>

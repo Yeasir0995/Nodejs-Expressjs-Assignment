@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  lang="en"></html>
+
+<head>
+	<title>Add Doctor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar--default">
+		<div class="container-fluid">
+			<title>Add Doctor</title>
+			<ul class="nav navbar-nav">
+				<li class="active">	<a href="/admin">Home</a></li>
+				<li class="active"><a href="/admin/view_BookList">Book</a></li>
+				<li class="active"><a href="/logout">Logout</a></li>
+
+				
+     	<form method="post">
+			<div class="row justify-content-center">
+				<div class="col-auto">
+		
+	
+					ID:
+				
+				<input type="text" class="form-control" name="id" value="<%= user.id%>" required>
+			
+		
+					Book Name:
+			
+			<input type="text" class="form-control"  name="bookName" value="<%= user.bookName %>" required>
+		
+
+			
+				price:
+			
+				<input type="text" class="form-control"  name="price" value="<%= user.price%>" required>
+					category:
+			
+			 <input type="text"class="form-control"  name="category" value="<%= user.category %>" required>
+			
+			
+		
+		</div>
+		</div>
+
+
+		<input type="Submit" class="btn btn-primary" name="" value="Update"><br>
+
+	</form>
+	</div>
+</body>
+
+</html>

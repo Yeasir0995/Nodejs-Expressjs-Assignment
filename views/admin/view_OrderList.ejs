@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Booked Slot</title>
+</head>
+
+<body>
+	<div>
+		<h2>Booked Slot</h2>
+	</div>
+
+	<a href="/admin">Home</a>
+	<a href="/logout">Logout</a><br>
+	
+	<a href="/admin/view_Available">Availabl slot</a><br>
+
+	<table border="1">
+		<tr>
+			<td>Order Id</td>
+			<td> Book Name</td>
+			<td>Price</td>
+			<td>Date</td>
+		
+		</tr>
+		<% for(var i=0; i < userlist.length; i++){ %>
+		<tr>
+			<td><%= userlist[i].order_id %></td>
+			<td><%= userlist[i].bookName%></td>
+			
+			<td><%= userlist[i].price %></td>
+			<td><%= userlist[i].date%></td>
+		
+			<td>
+				<a href="/admin/view_Booked/<%= userlist[i].username %>">Booked Slot</a>
+			</td>
+		</tr>
+		<%  } %>
+	</table>
+
+</body>
+
+</html>

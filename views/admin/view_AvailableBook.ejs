@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Available slot</title>
+</head>
+
+<body>
+	<div>
+		<h2>Available slot</h2>
+	</div>
+
+	<a href="/admin">Home</a>|
+	<a href="/logout">Logout</a><br><br>
+	<a href="/admin/profile">Edit Profile</a><br>
+	<a href="/admin/view_Booked ">Booked slot</a><br>
+
+
+	<table border="1">
+		<tr>
+			<td>Id Serial</td>
+			<td> DoctorName</td>
+			<td>Date</td>
+			<td>specialization</td>
+			<td>status</td>
+		</tr>
+		<% for(var i=0; i < userlist.length; i++){ %>
+		<tr>
+			<td><%= userlist[i].idserial %></td>
+			<td><%= userlist[i].dName%></td>
+			
+			<td><%= userlist[i].date %></td>
+			<td><%= userlist[i].specialization%></td>
+			<td><%= userlist[i].status %></td>
+		</tr>
+		<%  } %>
+	</table>
+
+</body>
+
+</html>

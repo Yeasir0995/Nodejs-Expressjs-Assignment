@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+
+	<head>
+		<head>
+			<%- include('../partials/head'); %>
+		</head>
+	
+</head>
+ 
+<body class="container">
+	<header>
+		<%- include('../partials/header'); %>
+	</header>
+	<main>
+		<main class="px-3">
+         <!---  <div class="text-4xl sm:text-5xl text-center my-10">Search Results</div> -->
+
+
+		<div class="p-3 mb-2 bg-info text-white">
+			<h2>Online Book store</h2>
+		</div>
+		</main>
+		</main>
+	
+	<a href="/admin/profile">Edit Admin Profile</a><br>
+	
+	
+
+	<li class="nav-item">
+		<a class="nav-link" Name: <%= user.name %> <br>
+	     UserName: <%= user.username %> <br>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" Email: <%= user.email %> <br>
+				Email: <%= user.email %> <br>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"	phone: <%= user.phone %> <br>
+					phone: <%= user.phone%> <br>
+				</li>
+	
+				<li class="nav-item">
+					Password: <%= user.password %> <br>
+					<a class="nav-link" Password: <%= user.password %> <br>
+						</li>
+	<footer>
+		<%- include('../partials/footer'); %>
+	</footer>
+</body>
+
+</html>
